@@ -12,7 +12,7 @@ const Movie = ({ movieList }) => {
 }
 
 Movie.propTypes = {
-  movieList: PropTypes.arrayOf(PropTypes.any).isRequired
+  movieList: PropTypes.object
 }
 
 export default Movie
