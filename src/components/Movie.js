@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 const Movie = ({ movieList }) => {
   return (
-        <div>
+        <div className="card">
             <label>Title</label>
             <h3>{movieList.title}</h3>
             <label>Description</label>

@@ -4,3 +4,12 @@
     padding: 10px;
     font-family: 'Roboto',Arial, Helvetica, sans-serif;
 }
+.container{
+    display: grid;
+    justify-content: center;
+}
+.container .card{
+    width: 250px;
+    padding: 20px;
+    box-shadow:  0 10px 10px -5px;
+}
