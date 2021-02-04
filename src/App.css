@@ -9,7 +9,13 @@
     justify-content: center;
 }
 .container .card{
-    width: 250px;
+    min-width: 250px;
     padding: 20px;
     box-shadow:  0 10px 10px -5px;
+}
+.addMovies ,input{
+    float: right;
+}
+#saveBtn{
+    width: 100%;
 }

@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AddMovies from './AddMovies'
 
 const AddButton = () => {
-  const toggleForm = () => {
-    console.log('Toggling Form')
+  const [btnToggle, setToggle] = useState(false)
+  const [btnText, setBtnText] = useState('Add Movies')
+  const handleToggle = () => {
+    setToggle(!btnToggle)
+    if (btnToggle) {
+      setBtnText('Add Movies')
+    } else {
+      setBtnText('Close')
+    }
   }
   return (
     <>
-    <AddMovies />
-        <button onClick = {toggleForm}>
-          Add
-        </button>
+    <button onClick = { handleToggle } > {btnText} </button>
+    {btnToggle && <AddMovies />}
     </>
   )
 }
