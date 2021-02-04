@@ -1,13 +1,26 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { MovieContext } from '../context/MovieContext'
+import { v4 as uuidv4 } from 'uuid'
 
 const AddMovies = () => {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
+  const [id, setId] = useState(null)
+  const { addMovies } = useContext(MovieContext)
+
   const handleSubmit = (e) => {
     e.preventDefault()
+    setId(uuidv4())
+    const newMovie = {
+      title,
+      description,
+      id
+    }
     setTitle('')
     setDescription('')
+    addMovies(newMovie)
   }
+
   return (
     <div className="addMovies">
         <form onSubmit = {handleSubmit}>

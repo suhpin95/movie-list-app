@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Movie from './Movie'
+import { MovieContext } from '../context/MovieContext'
 
 const ListMovies = () => {
-  const movieList = [
-    { id: 1, title: 'Temp1', description: 'Lorum Ipsum' },
-    { id: 2, title: 'Temp2', description: 'Lorum Ipsum' }
-  ]
+  const { movieList } = useContext(MovieContext)
+  console.log(movieList)
   return (
     <>
       <ul>
