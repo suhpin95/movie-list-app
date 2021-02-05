@@ -19,3 +19,6 @@
 #saveBtn{
     width: 100%;
 }
+#deletCursor{
+    float: right;
+}

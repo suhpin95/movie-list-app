@@ -1,11 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { FaTimes } from 'react-icons/fa'
 const Movie = ({ movieList }) => {
   return (
         <div className="card">
-            <label>Title</label>
+            <label>Movie <FaTimes
+             id='deletCursor'
+             style={{
+               color: 'red',
+               cursor: 'pointer'
+             }}/></label>
             <h3>{movieList.title}</h3>
-            <label>Description</label>
+            <label>Director</label>
             <h3>{movieList.description}</h3>
         </div>
   )

@@ -4,7 +4,7 @@ export default (state, action) => {
     case 'ADD_MOVIE':
       return {
         ...state,
-        movies: [action.payload, ...state.movieList]
+        movieList: [action.payload, ...state.movieList]
       }
     default: {
       return state

@@ -4,7 +4,6 @@ import { MovieContext } from '../context/MovieContext'
 
 const ListMovies = () => {
   const { movieList } = useContext(MovieContext)
-  console.log(movieList)
   return (
     <>
       <ul>
