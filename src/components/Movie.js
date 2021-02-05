@@ -1,10 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FaTimes } from 'react-icons/fa'
-const Movie = ({ movieList }) => {
+
+const Movie = ({ movieList, deleteMovies }) => {
+  const handleSubmit = (id) => {
+    deleteMovies(id)
+  }
   return (
         <div className="card">
             <label>Movie <FaTimes
+             onClick= { () => { handleSubmit(movieList.id) }}
              id='deletCursor'
              style={{
                color: 'red',
@@ -18,7 +23,8 @@ const Movie = ({ movieList }) => {
 }
 
 Movie.propTypes = {
-  movieList: PropTypes.object
+  movieList: PropTypes.any,
+  deleteMovies: PropTypes.func
 }
 
 export default Movie

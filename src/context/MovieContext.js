@@ -14,17 +14,26 @@ export const MovieProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState)
 
   // Actions
+  // add
   function addMovies (movie) {
     dispatch({
       type: 'ADD_MOVIE',
       payload: movie
     })
   }
+  // delete
+  function deleteMovies (id) {
+    dispatch({
+      type: 'DELETE_MOVIE',
+      payload: id
+    })
+  }
   return (
       <MovieContext.Provider value = {
           {
             movieList: state.movieList,
-            addMovies
+            addMovies,
+            deleteMovies
           }
       }>
           {children}
