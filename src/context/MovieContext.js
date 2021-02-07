@@ -4,8 +4,8 @@ import AppReducer from './AppReducer'
 
 const initialState = {
   movieList: [
-    { id: 1, title: 'Temp1', description: 'Lorum Ipsum' },
-    { id: 2, title: 'Temp2', description: 'Lorum Ipsum' }
+    { id: 1, title: 'Pulp Fiction', director: 'Quintin Tarentino' },
+    { id: 2, title: 'Dark Knight', director: 'Chris Nolan' }
   ]
 }
 

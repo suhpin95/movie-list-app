@@ -17,7 +17,7 @@ const Movie = ({ movieList, deleteMovies }) => {
              }}/></label>
             <h3>{movieList.title}</h3>
             <label>Director</label>
-            <h3>{movieList.description}</h3>
+            <h3>{movieList.director}</h3>
         </div>
   )
 }
